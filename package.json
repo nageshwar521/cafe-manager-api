@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start:dev",
-    "start:dev": "NODE_ENV=development nodemon ./src/server.js",
-    "start:prod": "NODE_ENV=production node ./src/server.js",
+    "start": "NODE_ENV=development nodemon ./src/server.js",
     "migrate": "knex migrate:latest",
     "seed": "knex seed:run",
     "rollback": "knex migrate:rollback --all",

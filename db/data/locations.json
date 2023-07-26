@@ -1,0 +1,152 @@
+[
+	{
+		"id" : "97a4b708-2922-11ee-8a39-987eaeed9939",
+		"name" : "Bedok",
+		"created_at" : "2023-07-23 14:31:44",
+		"updated_at" : "2023-07-23 14:31:44"
+	},
+	{
+		"id" : "a7ce0184-2922-11ee-8a39-987eaeed9939",
+		"name" : "Boat Quay",
+		"created_at" : "2023-07-23 14:32:11",
+		"updated_at" : "2023-07-23 14:32:11"
+	},
+	{
+		"id" : "f6ce0c3e-2922-11ee-8a39-987eaeed9939",
+		"name" : "Boonkeng",
+		"created_at" : "2023-07-23 14:34:24",
+		"updated_at" : "2023-07-23 14:34:24"
+	},
+	{
+		"id" : "c19363e2-291e-11ee-8a39-987eaeed9939",
+		"name" : "Buangkok",
+		"created_at" : "2023-07-23 14:04:16",
+		"updated_at" : "2023-07-23 14:04:16"
+	},
+	{
+		"id" : "9b8e82cc-2922-11ee-8a39-987eaeed9939",
+		"name" : "Changi",
+		"created_at" : "2023-07-23 14:31:51",
+		"updated_at" : "2023-07-23 14:31:51"
+	},
+	{
+		"id" : "a4331e60-2922-11ee-8a39-987eaeed9939",
+		"name" : "Clark Quay",
+		"created_at" : "2023-07-23 14:32:05",
+		"updated_at" : "2023-07-23 14:32:05"
+	},
+	{
+		"id" : "bc0b6178-2922-11ee-8a39-987eaeed9939",
+		"name" : "Dhobieghat",
+		"created_at" : "2023-07-23 14:32:45",
+		"updated_at" : "2023-07-23 14:32:45"
+	},
+	{
+		"id" : "8e32d024-2922-11ee-8a39-987eaeed9939",
+		"name" : "Farrer Park",
+		"created_at" : "2023-07-23 14:31:28",
+		"updated_at" : "2023-07-23 14:31:28"
+	},
+	{
+		"id" : "caf6db54-2922-11ee-8a39-987eaeed9939",
+		"name" : "Harbourfront",
+		"created_at" : "2023-07-23 14:33:10",
+		"updated_at" : "2023-07-23 14:33:10"
+	},
+	{
+		"id" : "c83833c6-291e-11ee-8a39-987eaeed9939",
+		"name" : "Hougang",
+		"created_at" : "2023-07-23 14:04:27",
+		"updated_at" : "2023-07-23 14:04:27"
+	},
+	{
+		"id" : "d6fd4bfe-2922-11ee-8a39-987eaeed9939",
+		"name" : "Jurong East",
+		"created_at" : "2023-07-23 14:33:30",
+		"updated_at" : "2023-07-23 14:33:30"
+	},
+	{
+		"id" : "5f63e5a8-2922-11ee-8a39-987eaeed9939",
+		"name" : "Kovan",
+		"created_at" : "2023-07-23 14:30:10",
+		"updated_at" : "2023-07-23 14:30:10"
+	},
+	{
+		"id" : "b644d058-2922-11ee-8a39-987eaeed9939",
+		"name" : "Little India",
+		"created_at" : "2023-07-23 14:32:35",
+		"updated_at" : "2023-07-23 14:32:35"
+	},
+	{
+		"id" : "d2512b16-2922-11ee-8a39-987eaeed9939",
+		"name" : "Marina Bay",
+		"created_at" : "2023-07-23 14:33:22",
+		"updated_at" : "2023-07-23 14:33:22"
+	},
+	{
+		"id" : "fbc72536-2922-11ee-8a39-987eaeed9939",
+		"name" : "Patong Pasir",
+		"created_at" : "2023-07-23 14:34:32",
+		"updated_at" : "2023-07-23 14:34:32"
+	},
+	{
+		"id" : "daeaf02c-2922-11ee-8a39-987eaeed9939",
+		"name" : "Payalaber",
+		"created_at" : "2023-07-23 14:33:37",
+		"updated_at" : "2023-07-23 14:33:37"
+	},
+	{
+		"id" : "b665d70c-291e-11ee-8a39-987eaeed9939",
+		"name" : "Punggol",
+		"created_at" : "2023-07-23 14:03:58",
+		"updated_at" : "2023-07-23 14:03:58"
+	},
+	{
+		"id" : "3669d99a-2923-11ee-8a39-987eaeed9939",
+		"name" : "Raffles Place",
+		"created_at" : "2023-07-23 14:36:10",
+		"updated_at" : "2023-07-23 14:36:10"
+	},
+	{
+		"id" : "3970a7a4-2923-11ee-8a39-987eaeed9939",
+		"name" : "Raffles Quay",
+		"created_at" : "2023-07-23 14:36:15",
+		"updated_at" : "2023-07-23 14:36:15"
+	},
+	{
+		"id" : "bc2e63fc-291e-11ee-8a39-987eaeed9939",
+		"name" : "Sengkang",
+		"created_at" : "2023-07-23 14:04:07",
+		"updated_at" : "2023-07-23 14:04:07"
+	},
+	{
+		"id" : "89f1e072-2922-11ee-8a39-987eaeed9939",
+		"name" : "Serangoon",
+		"created_at" : "2023-07-23 14:31:21",
+		"updated_at" : "2023-07-23 14:31:21"
+	},
+	{
+		"id" : "937cf294-2922-11ee-8a39-987eaeed9939",
+		"name" : "Tampanis",
+		"created_at" : "2023-07-23 14:31:37",
+		"updated_at" : "2023-07-23 14:31:37"
+	},
+	{
+		"id" : "f144606a-2922-11ee-8a39-987eaeed9939",
+		"name" : "Toa Payoh",
+		"created_at" : "2023-07-23 14:34:14",
+		"updated_at" : "2023-07-23 14:34:14"
+	},
+	{
+		"id" : "ece510be-2922-11ee-8a39-987eaeed9939",
+		"name" : "Woodlands",
+		"created_at" : "2023-07-23 14:34:07",
+		"updated_at" : "2023-07-23 14:34:07"
+	},
+	{
+		"id" : "e842ef7c-2922-11ee-8a39-987eaeed9939",
+		"name" : "Yishun",
+		"created_at" : "2023-07-23 14:33:59",
+		"updated_at" : "2023-07-23 14:33:59"
+	}
+]

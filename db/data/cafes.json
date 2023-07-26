@@ -1,0 +1,38 @@
+[
+	{
+		"id" : "aa6c6666-2b7e-11ee-8fb0-4023f14eb18f",
+		"name" : "Old Hen Coffee Bar",
+		"logoUrl" : null,
+		"description" : "we serve specialty coffee including a range of in-house Cold Brews and also delectable breakfast and brunch meals.",
+		"phone_number" : "6563415458",
+		"address" : "88 Rangoon Rd, Singapore",
+		"location" : "8e32d024-2922-11ee-8a39-987eaeed9939",
+		"pincode" : "218374",
+		"created_at" : "2023-07-26 14:35:52",
+		"updated_at" : "2023-07-26 14:35:52"
+	},
+	{
+		"id" : "e02889c0-2b7d-11ee-8fb0-4023f14eb18f",
+		"name" : "Starbucks",
+		"logoUrl" : null,
+		"description" : "This place serves one of the best tea and coffee in the city",
+		"phone_number" : "6580808080",
+		"address" : "60 Airport Boulevard 02-33 Departure Hall, Terminal 2 Singapore Changi Airport",
+		"location" : "9b8e82cc-2922-11ee-8a39-987eaeed9939",
+		"pincode" : "819643",
+		"created_at" : "2023-07-26 14:30:12",
+		"updated_at" : "2023-07-26 15:15:28"
+	},
+	{
+		"id" : "08507e5e-2b7d-11ee-8fb0-4023f14eb18f",
+		"name" : "Old Tea Hut",
+		"logoUrl" : null,
+		"description" : "This place serves one of the best tea and coffee in the city.",
+		"phone_number" : "6598989898",
+		"address" : "B01",
+		"location" : "3669d99a-2923-11ee-8a39-987eaeed9939",
+		"pincode" : "123231",
+		"created_at" : "2023-07-26 14:24:10",
+		"updated_at" : "2023-07-26 14:24:10"
+	}
+]

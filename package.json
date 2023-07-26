@@ -1,0 +1,34 @@
+{
+  "name": "employees-micro-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development nodemon server.js",
+    "postinstall": "npm run migrate",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "resetDb": "node ./db/resetDb.js",
+    "destroy": "node ./db/destroy.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.26.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.9",
+    "dotenv": "^10.0.0",
+    "dropbox-v2-api": "^2.4.40",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "knex": "^1.0.3",
+    "lodash": "^4.17.21",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7",
+    "reflect-metadata": "^0.1.13",
+    "socket.io": "^4.1.2",
+    "uuid": "^8.3.2"
+  }
+}

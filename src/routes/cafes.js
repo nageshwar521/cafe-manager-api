@@ -46,7 +46,9 @@ router.get("/", async (req, res) => {
           msgKey: labelKeys.getSuccess,
           fields: { field: "Cafes" },
         }),
-        data: { cafes: newCafes },
+        data: {
+          cafes: newCafes.sort((a, b) => (a.employees < b.employees ? 1 : -1)),
+        },
       })
     );
   } catch (error) {

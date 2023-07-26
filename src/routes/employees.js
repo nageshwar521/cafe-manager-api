@@ -1,7 +1,12 @@
 const express = require("express");
 // const { uploadFile } = require("../middlewares/upload");
 const { getI18nMessage } = require("../i18n");
-const { errorResponse, successResponse, isValidEmail } = require("../utils");
+const {
+  errorResponse,
+  successResponse,
+  isValidEmail,
+  dateComparator,
+} = require("../utils");
 const db = require("../db/connection");
 const bcrypt = require("bcryptjs");
 const labelKeys = require("../i18n/labelKeys");
@@ -70,7 +75,7 @@ router.get("/", async (req, res) => {
           msgKey: labelKeys.getSuccess,
           fields: { field: "Employees" },
         }),
-        data: { employees: newEmployees },
+        data: { employees: newEmployees.sort(dateComparator) },
       })
     );
   } catch (error) {

@@ -16,7 +16,7 @@ exports.up = function (knex) {
           .checkRegex("[0-9]{8}")
           .notNullable();
         table.text("address").notNullable();
-        table.uuid("location").references("id").inTable("locations");
+        table.uuid("location").notNullable();
         table.string("pincode").notNullable();
         table.timestamp("created_at").defaultTo(knex.fn.now());
         table.timestamp("updated_at").defaultTo(knex.fn.now());

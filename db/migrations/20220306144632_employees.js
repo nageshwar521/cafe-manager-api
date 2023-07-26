@@ -7,6 +7,7 @@ exports.up = function (knex) {
     if (!exists) {
       return knex.schema.createTable("employees", function (table) {
         table.uuid("id").defaultTo(knex.raw("(UUID())"));
+        table.increments("employeeId");
         table.string("first_name").notNullable();
         table.string("middle_name").nullable();
         table.string("last_name").notNullable();
@@ -20,8 +21,8 @@ exports.up = function (knex) {
         table.string("dob").nullable();
         table.string("start_date").notNullable();
         table.string("end_date").nullable();
-        table.uuid("role").references("id").inTable("roles");
-        table.uuid("cafe").references("id").inTable("cafes");
+        table.uuid("role").nullable();
+        table.uuid("cafe").notNullable();
         table.string("email_address").unique().notNullable();
         table.string("username").unique().nullable();
         table.text("password").notNullable();

@@ -1,5 +1,3 @@
-require("dotenv").config();
-// console.log(process.env);
 const path = require("path");
 
 const devConfig = {

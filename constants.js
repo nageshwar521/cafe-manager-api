@@ -7,6 +7,8 @@ const DBX_ACCESS_TOKEN =
 const DBX_GET_TEMPORARY_LINK_PATH = "https://api.dropboxapi.com/2";
 const DBX_API_DOMAIN = "https://api.dropboxapi.com";
 
+const SCHEMA_NAME = "cafe_manager_db";
+
 const CAFES_TABLE = "cafes";
 const EMPLOYEES_TABLE = "employees";
 const LOCATIONS_TABLE = "locations";
@@ -23,4 +25,5 @@ module.exports = {
   LOCATIONS_TABLE,
   EMPLOYEES_TABLE,
   ROLES_TABLE,
+  SCHEMA_NAME,
 };

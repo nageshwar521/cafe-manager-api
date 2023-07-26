@@ -1,5 +1,4 @@
-require("dotenv").config();
-const { devConfig, prodConfig } = require("./db/config");
+const { devConfig, prodConfig } = require("./src/db/config");
 
 module.exports = {
   development: devConfig,

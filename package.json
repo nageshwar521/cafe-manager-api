@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run start:dev",
-    "start:dev": "NODE_ENV=development nodemon server.js",
-    "start:prod": "NODE_ENV=production node server.js",
+    "start:dev": "NODE_ENV=development nodemon ./src/server.js",
+    "start:prod": "NODE_ENV=production node ./src/server.js",
     "migrate": "knex migrate:latest",
     "seed": "knex seed:run",
     "rollback": "knex migrate:rollback --all",
-    "resetDb": "node ./db/resetDb.js",
-    "destroy": "node ./db/destroy.js"
+    "resetDb": "node ./src/db/resetDb.js",
+    "destroy": "node ./src/db/destroy.js"
   },
   "keywords": [],
   "author": "",

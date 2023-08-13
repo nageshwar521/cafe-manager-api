@@ -9,7 +9,7 @@ const dropbox = dropboxV2Api.authenticate({
   token: DBX_ACCESS_TOKEN,
 });
 
-const uploadFile2 = (req, res, next) => {
+const uploadDropbox = (req, res, next) => {
   console.log("uploadFile req file");
   const file = req.body.file;
   if (!file) {
@@ -49,4 +49,4 @@ const uploadFile2 = (req, res, next) => {
   }
 };
 
-module.exports = { uploadFile: uploadFile2 };
+module.exports = { uploadDropbox: uploadDropbox };

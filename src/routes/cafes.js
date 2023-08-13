@@ -9,6 +9,7 @@ const {
   EMPLOYEES_TABLE,
 } = require("../constants");
 const { isEmpty } = require("lodash");
+const uploadLocal = require("../middlewares/uploadLocal");
 
 const router = express.Router();
 
@@ -60,7 +61,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", uploadLocal, async (req, res) => {
   const data = req.body;
 
   try {
@@ -79,6 +80,7 @@ router.post("/", async (req, res) => {
     }
     const result = await db(CAFES_TABLE).insert({
       ...data,
+      logoUrl: req.filePath || "",
       updated_at: db.fn.now(),
     });
     res.status(200).send(
@@ -140,7 +142,7 @@ router.get("/:cafeId", async (req, res) => {
   }
 });
 
-router.put("/:cafeId", async (req, res) => {
+router.put("/:cafeId", uploadLocal, async (req, res) => {
   const cafeId = req.params.cafeId;
   const data = req.body;
   let newData = {
@@ -164,6 +166,7 @@ router.put("/:cafeId", async (req, res) => {
     const result = await db(CAFES_TABLE)
       .update({
         ...data,
+        logoUrl: req.filePath || "",
         updated_at: db.fn.now(),
       })
       .where("id", cafeId);

@@ -13,6 +13,10 @@ const labelKeys = {
   getError: "getError",
   alreadyExists: "alreadyExists",
   unknownRole: "unknownRole",
+  invalidFile: "invalidFile",
+  fileTooLarge: "fileTooLarge",
+  fileUploadError: "fileUploadError",
+  fileUploadSuccess: "fileUploadSuccess",
 };
 
 module.exports = labelKeys;

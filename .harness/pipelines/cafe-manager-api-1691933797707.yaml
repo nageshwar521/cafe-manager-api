@@ -1,0 +1,33 @@
+pipeline:
+  identifier: Build_cafe_manager_api_1691933893861
+  name: Build cafe-manager-api
+  orgIdentifier: default
+  projectIdentifier: Cafe_Manager_Api
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1691933644552
+        repoName: nageshwar521/cafe-manager-api
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: npminstall
+                  name: npm_install
+                  spec:
+                    command: npm install
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI

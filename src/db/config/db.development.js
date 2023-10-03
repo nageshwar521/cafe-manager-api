@@ -1,7 +1,9 @@
 const path = require("path");
 
+// console.log(process.env);
+
 const devConfig = {
-  client: "mysql",
+  client: "mysql2",
   connection: {
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,

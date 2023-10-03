@@ -1,5 +1,41 @@
 [
 	{
+		"id" : "6dcccd00-2e16-11ee-8fb0-4023f14eb18f",
+		"name" : "Hangar66 Cafe",
+		"logoUrl" : "",
+		"description" : "Hidden away in an aircraft hangar within the Seletar Aerospace district is Hangar66 Cafe, an aviation-themed cafe with an actual auto-gyrocopter parked inside.",
+		"phone_number" : "6512233445",
+		"address" : "66 Seletar Aerospace View WOA Aviation Hangar 66 Level 1, Singapore",
+		"location" : "bc2e63fc-291e-11ee-8a39-987eaeed9939",
+		"pincode" : "797509",
+		"created_at" : "2023-07-29 21:47:16",
+		"updated_at" : "2023-07-29 21:47:16"
+	},
+	{
+		"id" : "8b072558-2e13-11ee-8fb0-4023f14eb18f",
+		"name" : "Soul Coffee",
+		"logoUrl" : "",
+		"description" : "If you’re all about astrological charts and tarot readings, you absolutely have to visit Soul Coffee. Step into the space, and you’ll find it covered in magical floor-to-ceiling immersive projections of majestic whale",
+		"phone_number" : "6545342321",
+		"address" : "11 Tanjong Katong Road, #02-16, Singapore",
+		"location" : "89f1e072-2922-11ee-8a39-987eaeed9939",
+		"pincode" : "437157",
+		"created_at" : "2023-07-29 21:26:36",
+		"updated_at" : "2023-07-29 21:26:36"
+	},
+	{
+		"id" : "d17247d0-2d72-11ee-8fb0-4023f14eb18f",
+		"name" : "Mr Holmes Bakehouse",
+		"logoUrl" : "",
+		"description" : "Mr Holmes Bakehouse is famously known as the inventor of the cruffin, as is the first of its kind to reach the shores of Southeast Asia. The cafe is great for your next OOTD shot, with its signature white-tiled walls and neon pink signs.",
+		"phone_number" : "6563340308",
+		"address" : "9 Scotts Road, #01-01/02/03, Pacific Plaza, Singapore",
+		"location" : "bc2e63fc-291e-11ee-8a39-987eaeed9939",
+		"pincode" : "228210",
+		"created_at" : "2023-07-29 02:16:05",
+		"updated_at" : "2023-08-07 23:11:09"
+	},
+	{
 		"id" : "aa6c6666-2b7e-11ee-8fb0-4023f14eb18f",
 		"name" : "Old Hen Coffee Bar",
 		"logoUrl" : null,
@@ -12,27 +48,111 @@
 		"updated_at" : "2023-07-26 14:35:52"
 	},
 	{
+		"id" : "e3fd3cc6-2e11-11ee-8fb0-4023f14eb18f",
+		"name" : "Handlebar",
+		"logoUrl" : "",
+		"description" : "For those who envy the high octane bustle of American biker culture, you can’t miss out on Handlebar, Singapore’s only Biker Bar.",
+		"phone_number" : "6576767688",
+		"address" : "10 Lock Rd, Singapore",
+		"location" : "3669d99a-2923-11ee-8a39-987eaeed9939",
+		"pincode" : "108938",
+		"created_at" : "2023-07-29 21:14:46",
+		"updated_at" : "2023-07-29 21:14:46"
+	},
+	{
+		"id" : "3b960814-2bdd-11ee-8fb0-4023f14eb18f",
+		"name" : "Maxi Coffee Bar",
+		"logoUrl" : null,
+		"description" : "This tiny coffee house is hiding some of the finest coffee around Singapore.",
+		"phone_number" : "6578789898",
+		"address" : "6 Ann Siang Hill, Singapore",
+		"location" : "3669d99a-2923-11ee-8a39-987eaeed9939",
+		"pincode" : "069787",
+		"created_at" : "2023-07-27 01:52:48",
+		"updated_at" : "2023-07-27 01:52:48"
+	},
+	{
+		"id" : "81bb2f10-2e10-11ee-8fb0-4023f14eb18f",
+		"name" : "Platform 1094",
+		"logoUrl" : "",
+		"description" : "Potterheads, this one’s for you! If you’ve got major magic withdrawals, head on over to  for a feast like no other. Put on your best robes and draw your wands because things are about to get magical.",
+		"phone_number" : "6578987687",
+		"address" : "1094 Serangoon Rd, Singapore",
+		"location" : "89f1e072-2922-11ee-8a39-987eaeed9939",
+		"pincode" : "328192",
+		"created_at" : "2023-07-29 21:04:52",
+		"updated_at" : "2023-07-29 21:04:52"
+	},
+	{
+		"id" : "6a51bc02-2e2b-11ee-8fb0-4023f14eb18f",
+		"name" : "Brunches Cafe",
+		"logoUrl" : "",
+		"description" : "From the old-timey posters plastered all over the walls to the quirky knick-knacks all around, Brunches Cafe is absolutely filled with actual vintage collectables — many of which are for sale if you happen to be a collector. ",
+		"phone_number" : "6578987688",
+		"address" : "96 Rangoon Rd, Singapore",
+		"location" : "89f1e072-2922-11ee-8a39-987eaeed9939",
+		"pincode" : "218381",
+		"created_at" : "2023-07-30 00:17:29",
+		"updated_at" : "2023-07-30 00:17:29"
+	},
+	{
 		"id" : "e02889c0-2b7d-11ee-8fb0-4023f14eb18f",
 		"name" : "Starbucks",
-		"logoUrl" : null,
+		"logoUrl" : "http://localhost:4000/public/images/1691573770207-Starbucks_Corporation_Logo_2011.svg.png",
 		"description" : "This place serves one of the best tea and coffee in the city",
 		"phone_number" : "6580808080",
 		"address" : "60 Airport Boulevard 02-33 Departure Hall, Terminal 2 Singapore Changi Airport",
 		"location" : "9b8e82cc-2922-11ee-8a39-987eaeed9939",
 		"pincode" : "819643",
 		"created_at" : "2023-07-26 14:30:12",
-		"updated_at" : "2023-07-26 15:15:28"
+		"updated_at" : "2023-08-09 17:36:10"
+	},
+	{
+		"id" : "73db9364-2d73-11ee-8fb0-4023f14eb18f",
+		"name" : "Kream & Kensho",
+		"logoUrl" : "http://localhost:4000/public/images/1691591927422-kreme-and-kensho.jpeg",
+		"description" : "Situated opposite Singapore General Hospital in Kampong Bahru, Kream & Kensho stars a Japanese-inspired design and tasty grub that’s IG-worthy as well.",
+		"phone_number" : "6587348743",
+		"address" : "35 Kampong Bahru Road, Singapore",
+		"location" : "bc2e63fc-291e-11ee-8a39-987eaeed9939",
+		"pincode" : "169355",
+		"created_at" : "2023-07-29 02:20:38",
+		"updated_at" : "2023-08-09 22:38:47"
+	},
+	{
+		"id" : "82674f32-2bdd-11ee-8fb0-4023f14eb18f",
+		"name" : "Flash Coffee",
+		"logoUrl" : "http://localhost:4000/public/images/1691591836678-flash-coffee_owler_20210407_033654_original.png",
+		"description" : "This new coffee café brand has more than 250 yellow stores across Asia, and was concepted by a Singaporean man.",
+		"phone_number" : "6587898789",
+		"address" : "1, One Raffles Pl, #B1-34",
+		"location" : "3669d99a-2923-11ee-8a39-987eaeed9939",
+		"pincode" : "048616",
+		"created_at" : "2023-07-27 01:54:47",
+		"updated_at" : "2023-08-09 22:37:16"
+	},
+	{
+		"id" : "864c9996-2e11-11ee-8fb0-4023f14eb18f",
+		"name" : "Cafe Kreams",
+		"logoUrl" : "",
+		"description" : "How many K-Dramas have you watched where the protagonists have a romantic encounter amidst gorgeous amber-hued foliage? If you’re a K-Drama fan, you will fall in love with the fairy-tale vibes of Cafe Kreams at Tanjong Pagar.",
+		"phone_number" : "6589897654",
+		"address" : "32 Maxwell Rd, #01-07 Maxwell Chambers, Singapore",
+		"location" : "3669d99a-2923-11ee-8a39-987eaeed9939",
+		"pincode" : "069115",
+		"created_at" : "2023-07-29 21:12:09",
+		"updated_at" : "2023-07-29 21:12:09"
 	},
 	{
 		"id" : "08507e5e-2b7d-11ee-8fb0-4023f14eb18f",
 		"name" : "Old Tea Hut",
-		"logoUrl" : null,
+		"logoUrl" : "http://localhost:4000/public/images/1691573181856-old-tea-hut-logo-brown.jpeg",
 		"description" : "This place serves one of the best tea and coffee in the city.",
 		"phone_number" : "6598989898",
 		"address" : "B01",
 		"location" : "3669d99a-2923-11ee-8a39-987eaeed9939",
 		"pincode" : "123231",
 		"created_at" : "2023-07-26 14:24:10",
-		"updated_at" : "2023-07-26 14:24:10"
+		"updated_at" : "2023-08-09 17:26:21"
 	}
 ]

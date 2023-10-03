@@ -6,6 +6,10 @@ const cafeRoutes = require("./routes/cafes");
 const employeeRoutes = require("./routes/employees");
 const roleRoutes = require("./routes/roles");
 const locationRoutes = require("./routes/locations");
+const amenitiesRoutes = require("./routes/amenities");
+const categoriesRoutes = require("./routes/categories");
+const conditionsRoutes = require("./routes/conditions");
+const postsRoutes = require("./routes/posts");
 
 const app = express();
 
@@ -24,6 +28,10 @@ app.use("/api/cafes", cafeRoutes);
 app.use("/api/employees", employeeRoutes);
 app.use("/api/roles", roleRoutes);
 app.use("/api/locations", locationRoutes);
+app.use("/api/amenities", amenitiesRoutes);
+app.use("/api/categories", categoriesRoutes);
+app.use("/api/conditions", conditionsRoutes);
+app.use("/api/posts", postsRoutes);
 
 const port = process.env.NODE_SERVER_PORT;
 const host = process.env.NODE_SERVER_HOST;

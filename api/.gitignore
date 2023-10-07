@@ -137,3 +137,8 @@ dist
 # Project
 package-lock.json
 *.rest
+
+# Docker
+.git
+*Dockerfile*
+*docker-compose*

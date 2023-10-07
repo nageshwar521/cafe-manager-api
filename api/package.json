@@ -17,7 +17,6 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "bookshelf": "^1.2.0",
     "cloudinary": "^1.26.0",
     "cors": "^2.8.5",
     "dayjs": "^1.11.9",

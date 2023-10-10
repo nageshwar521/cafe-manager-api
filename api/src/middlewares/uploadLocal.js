@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 });
 
 // Create multer upload instance
-const upload = multer({ storage: storage }).single("logoUrl");
+const upload = multer({ storage: storage }).array("images", 10);
 
 const uploadLocal = (req, res, next) => {
   return upload(req, res, function (err) {
@@ -45,57 +45,67 @@ const uploadLocal = (req, res, next) => {
         })
       );
     }
-    const file = req.file;
-    const array_of_allowed_files = ["png", "jpeg", "jpg", "gif"];
-    const array_of_allowed_file_types = [
+    const images = req.images;
+    const errors = [];
+    const array_of_allowed_images = ["png", "jpeg", "jpg", "gif"];
+    const array_of_allowed_image_types = [
       "image/png",
       "image/jpeg",
       "image/jpg",
-      "image/gif",
     ];
-    const allowed_file_size = 4;
-    if (!file) {
+    const allowed_image_size = 4;
+    if (!images) {
       next();
     } else {
-      const filename = path.basename(file.path);
-      console.log(filename, "filename");
-      const file_extension = file.originalname.slice(
-        file.originalname.lastIndexOf(".") + 1
-      );
+      images.forEach((image) => {
+        const imagename = path.basename(image.path);
+        console.log(imagename, "imagename");
+        const image_extension = image.originalname.slice(
+          image.originalname.lastIndexOf(".") + 1
+        );
 
-      console.log(file_extension, "file_extension");
-      console.log(file.mimetype, "file.memetype");
+        console.log(image_extension, "image_extension");
+        console.log(image.mimetype, "image.memetype");
 
-      // Check if the uploaded file is allowed
-      if (
-        !array_of_allowed_files.includes(file_extension) ||
-        !array_of_allowed_file_types.includes(file.mimetype)
-      ) {
-        return res.status(500).send(
-          errorResponse({
-            message: getI18nMessage({
+        // Check if the uploaded image is allowed
+        if (
+          !array_of_allowed_images.includes(image_extension) ||
+          !array_of_allowed_image_types.includes(image.mimetype)
+        ) {
+          errors.push(
+            getI18nMessage({
               msgKey: labelKeys.invalidFile,
-              fields: { field: array_of_allowed_files.join(", ") },
-            }),
-            error: { file },
-          })
-        );
-      }
+              fields: { field: array_of_allowed_images.join(", ") },
+            })
+          );
+        }
 
-      if (file.size / (1024 * 1024) > allowed_file_size) {
+        if (image.size / (1024 * 1024) > allowed_image_size) {
+          return errors.push(
+            getI18nMessage({
+              msgKey: labelKeys.imageTooLarge,
+              fields: { field: allowed_image_size + "MB" },
+            })
+          );
+        }
+        const protocol = req.secure ? "https://" : "http://";
+        images.push(
+          `${protocol}${host}:${port}/public/images/${image.imagename}`
+        );
+      });
+      if (errors.length > 0) {
         return res.status(500).send(
           errorResponse({
             message: getI18nMessage({
-              msgKey: labelKeys.fileTooLarge,
-              fields: { field: allowed_file_size + "MB" },
+              msgKey: labelKeys.fileUploadError,
             }),
-            error: { file },
+            error: {
+              errors,
+            },
           })
         );
       }
-      const protocol = req.secure ? "https://" : "http://";
-      const filePath = `${protocol}${host}:${port}/public/images/${file.filename}`;
-      req.filePath = filePath;
+      req.imagePath = imagePath;
       return next();
     }
   });

@@ -39,8 +39,8 @@ router.post("/", uploadLocal, async (req, res) => {
   try {
     const result = await db(POSTS_TABLE).insert({
       ...data,
-      images: req.images,
-      videos: req.videos,
+      photos: (req.images || []).join(", "),
+      videos: (req.videos || []).join(", "),
       updated_at: db.fn.now(),
     });
     res.status(200).send(

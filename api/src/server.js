@@ -4,6 +4,7 @@ const path = require("path");
 const cors = require("cors");
 const cafeRoutes = require("./routes/cafes");
 const employeeRoutes = require("./routes/employees");
+const userRoutes = require("./routes/users");
 const roleRoutes = require("./routes/roles");
 const locationRoutes = require("./routes/locations");
 const amenitiesRoutes = require("./routes/amenities");
@@ -32,6 +33,7 @@ app.use("/api/amenities", amenitiesRoutes);
 app.use("/api/categories", categoriesRoutes);
 app.use("/api/conditions", conditionsRoutes);
 app.use("/api/posts", postsRoutes);
+app.use("/api/users", userRoutes);
 
 const port = process.env.NODE_SERVER_PORT;
 const host = process.env.NODE_SERVER_HOST;

@@ -1,4 +1,4 @@
-const SCHEMA_NAME = "cafe_manager_db";
+const SCHEMA_NAME = process.env.DB_NAME;
 
 const CAFES_TABLE = "cafes";
 const EMPLOYEES_TABLE = "employees";
@@ -8,6 +8,7 @@ const POSTS_TABLE = "posts";
 const CATEGORIES_TABLE = "categories";
 const CONDITIONS_TABLE = "conditions";
 const AMENITIES_TABLE = "amenities";
+const USERS_TABLE = "users";
 
 module.exports = {
   SCHEMA_NAME,
@@ -19,4 +20,5 @@ module.exports = {
   CATEGORIES_TABLE,
   CONDITIONS_TABLE,
   AMENITIES_TABLE,
+  USERS_TABLE,
 };

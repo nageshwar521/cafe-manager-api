@@ -10,7 +10,8 @@ exports.up = function (knex) {
         table.string("first_name").nullable();
         table.string("middle_name").nullable();
         table.string("last_name").nullable();
-        table.string("phone_number").unique().checkRegex("[0-9]{8}").nullable();
+        table.string("phone_country_code").nullable();
+        table.string("phone_number").unique().nullable();
         table.string("gender").nullable();
         table.string("address").nullable();
         table.string("dob").nullable();

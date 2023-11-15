@@ -151,25 +151,24 @@ router.get("/:userId", async (req, res) => {
   }
 });
 
-router.post("/:userId", async (req, res) => {
+router.put("/:userId", async (req, res) => {
   const userId = req.params.userId;
   const data = req.body;
-  const isEmail = isValidEmail(data.username);
+  const isEmail = isValidEmail(data.email_address);
+  let user = null;
 
   try {
     if (isEmail) {
       user = await db(USERS_TABLE)
-        .where("email_address", data.username)
+        .where("email_address", data.email_address)
         .first();
-    } else {
-      user = await db(USERS_TABLE).where("username", data.username).first();
     }
     if (!user) {
       return res.status(404).send(
         errorResponse({
           message: getI18nMessage({
             msgKey: labelKeys.fieldNotFound,
-            fields: { field: "user" },
+            fields: { field: "User" },
           }),
           error: { isEmail },
         })
@@ -187,9 +186,9 @@ router.post("/:userId", async (req, res) => {
       successResponse({
         message: getI18nMessage({
           msgKey: labelKeys.updateSuccess,
-          fields: { field: "user" },
+          fields: { field: "User" },
         }),
-        data: { user: userDetails },
+        data: { user: result },
       })
     );
   } catch (error) {
@@ -197,9 +196,9 @@ router.post("/:userId", async (req, res) => {
       errorResponse({
         message: getI18nMessage({
           msgKey: labelKeys.updateError,
-          fields: { field: "user" },
+          fields: { field: "User" },
         }),
-        error: { result },
+        error,
       })
     );
   }
@@ -267,7 +266,7 @@ router.delete("/:userId", async (req, res) => {
         errorResponse({
           message: getI18nMessage({
             msgKey: labelKeys.fieldNotFound,
-            fields: { field: "user" },
+            fields: { field: "User" },
           }),
         })
       );
@@ -277,7 +276,7 @@ router.delete("/:userId", async (req, res) => {
       successResponse({
         message: getI18nMessage({
           msgKey: labelKeys.deleteSuccess,
-          fields: { field: "user" },
+          fields: { field: "User" },
         }),
         data: { result },
       })
@@ -287,7 +286,7 @@ router.delete("/:userId", async (req, res) => {
       errorResponse({
         message: getI18nMessage({
           msgKey: labelKeys.deleteError,
-          fields: { field: "user" },
+          fields: { field: "User" },
         }),
         error,
       })

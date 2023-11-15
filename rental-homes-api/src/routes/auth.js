@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const {
   ACCESS_TOKEN_SECRET,
-  REFRESH_TOKEN_SECRET,
   TOKEN_EXPIRE_TIME,
   USERS_TABLE,
 } = require("../constants");
@@ -23,7 +22,9 @@ router.post("/login", async (req, res) => {
   try {
     let user = null;
     if (isEmail) {
-      user = await db(USERS_TABLE).where("email", data.username).first();
+      user = await db(USERS_TABLE)
+        .where("email_address", data.username)
+        .first();
     } else {
       user = await db(USERS_TABLE).where("username", data.username).first();
     }
@@ -40,6 +41,7 @@ router.post("/login", async (req, res) => {
       );
     }
     const validPassword = await bcrypt.compare(data.password, user.password);
+    console.log(validPassword, "validPassword");
     if (!validPassword) {
       return res.status(401).send(
         errorResponse({
@@ -57,8 +59,9 @@ router.post("/login", async (req, res) => {
     );
     const refreshToken = jwt.sign(
       { username: data.username },
-      REFRESH_TOKEN_SECRET
+      ACCESS_TOKEN_SECRET
     );
+    console.log(user, accessToken);
     const { password, ...userDetails } = user;
     res.status(200).send(
       successResponse({
@@ -170,7 +173,7 @@ router.post("/token", (req, res) => {
       );
     }
 
-    jwt.verify(token, REFRESH_TOKEN_SECRET, (err, user) => {
+    jwt.verify(token, ACCESS_TOKEN_SECRET, (err, user) => {
       if (err) {
         return res.status(500).send(
           errorResponse({

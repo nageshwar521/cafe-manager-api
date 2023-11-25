@@ -6,10 +6,7 @@ const db = require("../db/connection");
 const labelKeys = require("../i18n/labelKeys");
 
 const verifyToken = (req, res, next) => {
-  // console.log(req, "req.authorization");
-  const token =
-    (req.headers.authorization && req.headers.authorization.split(" ")[1]) ||
-    "";
+  const token = req?.headers?.authorization?.slice(7) ?? "";
   if (!token) {
     return res.status(404).send(
       errorResponse({

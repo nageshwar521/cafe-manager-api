@@ -6,6 +6,7 @@ const labelKeys = require("../i18n/labelKeys");
 const { POSTS_TABLE } = require("../constants");
 const { isEmpty } = require("lodash");
 const uploadLocal = require("../middlewares/uploadLocal");
+const verifyToken = require("../middlewares/verifyToken");
 
 const router = express.Router();
 
@@ -33,7 +34,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.post("/", uploadLocal, async (req, res) => {
+router.post("/", verifyToken, uploadLocal, async (req, res) => {
   const data = req.body;
 
   try {
@@ -65,7 +66,7 @@ router.post("/", uploadLocal, async (req, res) => {
   }
 });
 
-router.get("/:postId", async (req, res) => {
+router.get("/:postId", verifyToken, async (req, res) => {
   const postId = req.params.postId;
 
   try {
@@ -102,7 +103,7 @@ router.get("/:postId", async (req, res) => {
   }
 });
 
-router.put("/:postId", uploadLocal, async (req, res) => {
+router.put("/:postId", verifyToken, uploadLocal, async (req, res) => {
   const postId = req.params.postId;
   const data = req.body;
   let newData = {
@@ -152,7 +153,7 @@ router.put("/:postId", uploadLocal, async (req, res) => {
   }
 });
 
-router.delete("/:postId", async (req, res) => {
+router.delete("/:postId", verifyToken, async (req, res) => {
   const postId = req.params.postId;
   // console.log("addPost called");
 

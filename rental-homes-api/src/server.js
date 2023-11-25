@@ -35,7 +35,7 @@ app.use("/api/locations", verifyToken, locationRoutes);
 app.use("/api/amenities", verifyToken, amenitiesRoutes);
 app.use("/api/categories", verifyToken, categoriesRoutes);
 app.use("/api/conditions", verifyToken, conditionsRoutes);
-app.use("/api/posts", verifyToken, postsRoutes);
+app.use("/api/posts", postsRoutes);
 app.use("/api/users", verifyToken, userRoutes);
 
 const port = process.env.NODE_SERVER_PORT;

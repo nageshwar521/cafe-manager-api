@@ -4,7 +4,7 @@ const { errorResponse, successResponse } = require("../utils");
 const db = require("../db/connection");
 const labelKeys = require("../i18n/labelKeys");
 const { POSTS_TABLE } = require("../constants");
-const { isEmpty } = require("lodash");
+const { isEmpty, uniqueId } = require("lodash");
 const uploadLocal = require("../middlewares/uploadLocal");
 const verifyToken = require("../middlewares/verifyToken");
 
@@ -44,6 +44,9 @@ router.post("/", verifyToken, uploadLocal, async (req, res) => {
       videos: (req.videos || []).join(", "),
       updated_at: db.fn.now(),
     });
+    if (!data.id) {
+      data.id = uniqueId();
+    }
     res.status(200).send(
       successResponse({
         message: getI18nMessage({

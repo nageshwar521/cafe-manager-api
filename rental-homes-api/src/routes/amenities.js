@@ -78,7 +78,7 @@ router.get("/:amenity_id", async (req, res) => {
 
   try {
     const amenity = await db(AMENITIES_TABLE)
-      .where("amenity_id", amenity_id)
+      .where("id", amenity_id)
       .first();
     if (!amenity) {
       return res.status(404).send(
@@ -121,7 +121,7 @@ router.post("/:amenity_id", async (req, res) => {
 
   try {
     const amenity = await db(AMENITIES_TABLE)
-      .where("amenity_id", amenity_id)
+      .where("id", amenity_id)
       .first();
 
     if (!amenity) {
@@ -136,7 +136,7 @@ router.post("/:amenity_id", async (req, res) => {
     }
 
     const result = await db(AMENITIES_TABLE)
-      .where("amenity_id", amenity_id)
+      .where("id", amenity_id)
       .update(newData);
     res.status(200).send(
       successResponse({
@@ -165,7 +165,7 @@ router.delete("/:amenity_id", async (req, res) => {
 
   try {
     const amenity = await db(AMENITIES_TABLE)
-      .where("amenity_id", amenity_id)
+      .where("id", amenity_id)
       .first();
     if (!amenity) {
       return res.status(404).send(
@@ -178,7 +178,7 @@ router.delete("/:amenity_id", async (req, res) => {
       );
     }
     const result = await db(AMENITIES_TABLE)
-      .where("amenity_id", amenity_id)
+      .where("id", amenity_id)
       .del();
     res.status(200).send(
       successResponse({

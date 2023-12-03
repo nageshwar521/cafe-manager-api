@@ -2,17 +2,17 @@ require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-const authRoutes = require("./routes/auth");
-const cafeRoutes = require("./routes/cafes");
-const employeeRoutes = require("./routes/employees");
-const userRoutes = require("./routes/users");
-const roleRoutes = require("./routes/roles");
-const locationRoutes = require("./routes/locations");
-const amenitiesRoutes = require("./routes/amenities");
-const categoriesRoutes = require("./routes/categories");
-const conditionsRoutes = require("./routes/conditions");
-const postsRoutes = require("./routes/posts");
-const verifyToken = require("./middlewares/verifyToken");
+const authRoutes = require("./src/routes/auth");
+const cafeRoutes = require("./src/routes/cafes");
+const employeeRoutes = require("./src/routes/employees");
+const userRoutes = require("./src/routes/users");
+const roleRoutes = require("./src/routes/roles");
+const locationRoutes = require("./src/routes/locations");
+const amenitiesRoutes = require("./src/routes/amenities");
+const categoriesRoutes = require("./src/routes/categories");
+const conditionsRoutes = require("./src/routes/conditions");
+const postsRoutes = require("./src/routes/posts");
+const verifyToken = require("./src/middlewares/verifyToken");
 
 const app = express();
 

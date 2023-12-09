@@ -3,7 +3,7 @@ const path = require("path");
 const prodConfig = {
   client: "mysql2",
   connection: {
-    host: process.env.DB_HOST,
+    host: '127.0.0.1',
     port: process.env.DB_PORT,
     database: process.env.DB_NAME,
     user: process.env.DB_USER,

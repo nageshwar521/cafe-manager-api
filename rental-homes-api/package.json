@@ -7,7 +7,7 @@
     "start": "cross-env NODE_ENV=development nodemon ./server.js",
     "prod": "cross-env NODE_ENV=production node ./server.js",
     "migrate": "knex migrate:latest",
-    "db:migrate": "node -r dotenv/config ./node_modules/knex/bin/cli.js migrate:latest --knexfile server/db/knexfile.js",
+    "db:migrate": "node -r dotenv/config ./node_modules/knex/bin/cli.js migrate:latest --knexfile knexfile.js",
     "seed": "knex seed:run",
     "rollback": "knex migrate:rollback --all",
     "resetDb": "node ./src/db/resetDb.js",

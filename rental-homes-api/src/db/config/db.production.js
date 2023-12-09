@@ -1,4 +1,5 @@
 const path = require("path");
+require("dotenv").config({ path: `.env.production` });
 
 const prodConfig = {
   client: "mysql2",

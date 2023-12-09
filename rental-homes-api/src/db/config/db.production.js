@@ -1,5 +1,5 @@
 const path = require("path");
-require("dotenv").config({ path: `.env.production` });
+require("dotenv").config({ path: path.join(__dirname, '../../../', '.env.production') });
 
 const prodConfig = {
   client: "mysql2",

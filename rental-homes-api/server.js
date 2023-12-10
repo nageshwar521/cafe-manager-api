@@ -16,6 +16,12 @@ const verifyToken = require("./src/middlewares/verifyToken");
 
 const app = express();
 
+const isDev = process.env.NODE_ENV === 'development';
+
+if (isDev) {
+  console.log = () => {};
+}
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());

@@ -1,5 +1,4 @@
 require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
-const path = require("path");
 const { noop } = require("lodash");
 const {
   ROLES_TABLE,

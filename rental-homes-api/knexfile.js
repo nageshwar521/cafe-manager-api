@@ -2,7 +2,7 @@ const path = require("path");
 console.log(process.env.NODE_ENV, 'process.env.NODE_ENV');
 require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` });
 
-const prodConfig = {
+const config = {
   client: "mysql2",
   connection: {
     host: process.env.DB_HOST,
@@ -23,4 +23,4 @@ const prodConfig = {
   },
 };
 
-module.exports = { prodConfig };
+module.exports = config;

@@ -1,7 +1,5 @@
 const { default: knex } = require("knex");
-const environment = process.env.NODE_ENV;
-const dbConfig = require("../../knexfile")[environment];
-console.log(environment, "db environment");
+const dbConfig = require('../../knexfile');
 
 const knexInstance = knex(dbConfig);
 

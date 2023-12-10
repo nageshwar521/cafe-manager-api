@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.use("/test", (req, res) => {
+app.use("/api/test", (req, res) => {
   res.send("Api is working");
 });
 app.use("/public/images/:imageName", (req, res) => {
@@ -28,10 +28,10 @@ app.use("/public/images/:imageName", (req, res) => {
   return res.sendFile(path.join(__dirname, `/uploads/${req.params.imageName}`));
 });
 app.use("/api/auth", authRoutes);
-app.use("/api/cafes", verifyToken, cafeRoutes);
+// app.use("/api/cafes", verifyToken, cafeRoutes);
 app.use("/api/employees", verifyToken, employeeRoutes);
-app.use("/api/roles", verifyToken, roleRoutes);
-app.use("/api/locations", verifyToken, locationRoutes);
+// app.use("/api/roles", verifyToken, roleRoutes);
+// app.use("/api/locations", verifyToken, locationRoutes);
 app.use("/api/amenities", verifyToken, amenitiesRoutes);
 app.use("/api/categories", verifyToken, categoriesRoutes);
 app.use("/api/conditions", verifyToken, conditionsRoutes);

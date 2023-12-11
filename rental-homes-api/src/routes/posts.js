@@ -44,7 +44,7 @@ router.post("/", verifyToken, uploadLocal, async (req, res) => {
       videos: (req.videos || []).join(", "),
       updated_at: db.fn.now(),
     });
-    if (!data.id) {
+    if (!isEmpty(data.id)) {
       data.id = uniqueId();
     }
     res.status(200).send(

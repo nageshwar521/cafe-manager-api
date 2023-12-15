@@ -186,7 +186,7 @@ router.post("/token", (req, res) => {
       }
 
       const accessToken = jwt.sign({ username }, ACCESS_TOKEN_SECRET, {
-        expiresIn: "20m",
+        expiresIn: TOKEN_EXPIRE_TIME,
       });
 
       res.status(200).send(

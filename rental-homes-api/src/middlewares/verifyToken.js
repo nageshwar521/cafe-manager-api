@@ -19,7 +19,7 @@ const verifyToken = (req, res, next) => {
   } else {
     jwt.verify(token, ACCESS_TOKEN_SECRET, (err, user) => {
       if (err) {
-        return res.status(403).send(
+        return res.status(401).send(
           errorResponse({
             message: getI18nMessage({
               msgKey: labelKeys.doesNotMatch,

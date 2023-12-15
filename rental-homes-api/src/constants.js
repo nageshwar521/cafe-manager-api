@@ -10,7 +10,7 @@ const CATEGORIES_TABLE = "categories";
 const CONDITIONS_TABLE = "conditions";
 const AMENITIES_TABLE = "amenities";
 const USERS_TABLE = "users";
-const TOKEN_EXPIRE_TIME = 60 * 60 * 1000;
+const TOKEN_EXPIRE_TIME = "1h";
 
 module.exports = {
   SCHEMA_NAME,

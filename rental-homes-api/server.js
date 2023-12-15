@@ -18,7 +18,7 @@ const app = express();
 
 const isDev = process.env.NODE_ENV === 'development';
 
-if (isDev) {
+if (!isDev) {
   console.log = () => {};
 }
 

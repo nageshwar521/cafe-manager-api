@@ -11,7 +11,7 @@ const getI18nMessage = (options = {}) => {
     return newObj;
   }, {});
   return (
-    labelStr.replace(/{field}|{field1}|{field2}/gi, function (matched) {
+    labelStr.replace(/{field}|{field1}|{field2}|{fields}/gi, function (matched) {
       return newFields[matched] || matched;
     }) || msgKey
   );

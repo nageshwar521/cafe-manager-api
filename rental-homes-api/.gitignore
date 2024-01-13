@@ -142,3 +142,6 @@ package-lock.json
 .git
 *Dockerfile*
 *docker-compose*
+
+# Whatsapp Web
+.wwebjs*

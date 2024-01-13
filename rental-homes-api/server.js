@@ -12,7 +12,12 @@ const amenitiesRoutes = require("./src/routes/amenities");
 const categoriesRoutes = require("./src/routes/categories");
 const conditionsRoutes = require("./src/routes/conditions");
 const postsRoutes = require("./src/routes/posts");
+const authWaRoutes = require("./src/routes/auth.whatsapp");
+const chatWaRoutes = require("./src/routes/chat.whatsapp");
+const contactWaRoutes = require("./src/routes/contact.whatsapp");
+const groupWaRoutes = require("./src/routes/group.whatsapp");
 const verifyToken = require("./src/middlewares/verifyToken");
+const client = require("./clientWhatsapp");
 
 const app = express();
 
@@ -34,6 +39,10 @@ app.use("/public/images/:imageName", (req, res) => {
   return res.sendFile(path.join(__dirname, `/uploads/${req.params.imageName}`));
 });
 app.use("/api/auth", authRoutes);
+app.use("/api/waAuth", authWaRoutes);
+app.use("/api/waChat", chatWaRoutes);
+app.use("/api/waContact", contactWaRoutes);
+app.use("/api/waGroup", groupWaRoutes);
 // app.use("/api/cafes", verifyToken, cafeRoutes);
 app.use("/api/employees", verifyToken, employeeRoutes);
 // app.use("/api/roles", verifyToken, roleRoutes);
@@ -49,4 +58,5 @@ const host = process.env.NODE_SERVER_HOST;
 
 app.listen(port, host, () => {
   console.log(`Listening on http://${host}:${port}`);
+  client.initialize();
 });
